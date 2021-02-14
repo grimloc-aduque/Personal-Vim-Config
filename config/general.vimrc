@@ -1,39 +1,38 @@
 
 syntax on
-set nocompatible
 filetype plugin on
+set nocompatible
 set noerrorbells
-set lazyredraw " Evitar recargar pantalla con macro
-set clipboard=unnamedplus " Compartir portapapeles sistema
 
-"Tabs
+" Tabs
 set tabstop=4 softtabstop=4
 set expandtab
 set shiftwidth=4
 set smartindent
 set nowrap
 
-"Navegacion
+" Navegacion
 set nu
 set relativenumber
 set scrolloff=4
 
-"Busqueda
+" Busqueda
 set incsearch
 set nohlsearch
 set smartcase
 
-""" Maps
-let mapleader = " "
-"Abrir file explorer
-nnoremap <leader>f :Files<cr> 
-" noremap <leader>run :!./run.sh<cr>
+" Splits
+" set splitbelow
+" set splitright
 
-""" Colorscheme
-" colorscheme gruvbox
-colorscheme sonokai
-" colorscheme dracula
 
+" Colorscheme
+colorscheme sonokai "grubvox, dracula
 set background=dark
 
+" Macros
+set lazyredraw 
+
+" Portapapeles
+set clipboard=unnamedplus 
 
