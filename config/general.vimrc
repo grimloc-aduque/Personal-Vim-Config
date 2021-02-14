@@ -1,11 +1,14 @@
 
 syntax on
-
+set nocompatible
+filetype plugin on
 set noerrorbells
+set lazyredraw " Evitar recargar pantalla con macro
+set clipboard=unnamedplus " Compartir portapapeles sistema
 
 "Tabs
 set tabstop=4 softtabstop=4
-"set expandtab
+set expandtab
 set shiftwidth=4
 set smartindent
 set nowrap
@@ -21,12 +24,10 @@ set nohlsearch
 set smartcase
 
 """ Maps
-let mapleader = ","
+let mapleader = " "
 "Abrir file explorer
-noremap <leader>f :Files<cr> 
-"Cambiar a modo normal
-" :imap ii <Esc>
-noremap <leader>run :!./run.sh<cr>
+nnoremap <leader>f :Files<cr> 
+" noremap <leader>run :!./run.sh<cr>
 
 """ Colorscheme
 " colorscheme gruvbox
@@ -34,3 +35,5 @@ colorscheme sonokai
 " colorscheme dracula
 
 set background=dark
+
+
