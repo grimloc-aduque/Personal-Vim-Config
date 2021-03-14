@@ -11,9 +11,6 @@ Plug 'sainnhe/sonokai'
 " Status bar
 Plug 'vim-airline/vim-airline' 
 
-" Start screen
-Plug 'mhinz/vim-startify' 
-
 " Verbs and objects
 Plug 'tpope/vim-commentary' " gc
 Plug 'tpope/vim-surround' "cs, ys
@@ -22,16 +19,27 @@ Plug 'michaeljsmith/vim-indent-object' " ii, iA
 
 " Files 
 Plug 'preservim/nerdtree' 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' 
 Plug 'jremmen/vim-ripgrep' " Regex :Rg 
 
 " Code
 Plug 'neoclide/coc.nvim' 
+let g:coc_global_extensions = [
+\ 'coc-clangd',
+\ 'coc-css',
+\ 'coc-html',
+\ 'coc-java',
+\ 'coc-jedi',
+\ 'coc-json',
+\ 'coc-snippets',
+\ 'coc-tsserver'
+\ ]
+
 Plug 'jiangmiao/auto-pairs' 
 Plug 'alvan/vim-closetag' 
-" Plug 'Yggdroot/indentLine' 
-" Plug 'SirVer/ultisnips' 
+Plug 'honza/vim-snippets' 
+" Plug 'vim-test/vim-test'
 
 " Git
 Plug 'tpope/vim-fugitive' 
@@ -41,9 +49,6 @@ Plug 'mbbill/undotree'
 
 " Contenido de registros con "
 Plug 'junegunn/vim-peekaboo' 
-
-" Notas
-Plug 'vimwiki/vimwiki' " <leader>ww
 
 call plug#end()
 

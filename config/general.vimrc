@@ -25,9 +25,11 @@ set smartcase
 " set splitbelow
 " set splitright
 
+" Buffers
+set wildignorecase
 
 " Colorscheme
-colorscheme sonokai "grubvox, dracula
+colorscheme gruvbox "sonokai, gruvbox, dracula
 set background=dark
 
 " Macros
