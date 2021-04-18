@@ -2,6 +2,9 @@
 nnoremap <leader>w :w<CR>
 nnoremap <leader>qq :q<CR>
 
+" Format all file
+" nmap <leader>F ggVG<leader>f
+
 " Undotree 
 nnoremap <leader>u :UndotreeToggle<CR>
 
