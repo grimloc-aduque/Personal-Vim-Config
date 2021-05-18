@@ -24,15 +24,18 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
 " Single mappings
-let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
+let g:which_key_map['/'] = [ 'gcc'                        , 'comment' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
 let g:which_key_map['f'] = [ ':Files'                     , 'search files' ]
 let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
+let g:which_key_map['q'] = [ ':q'                         , 'quit file']
 let g:which_key_map['r'] = [ ':Ranger'                    , 'ranger' ]
 let g:which_key_map['S'] = [ ':Startify'                  , 'start screen' ]
-let g:which_key_map['T'] = [ ':Rg'                        , 'search text' ]
+let g:which_key_map['T'] = [ ':RG'                        , 'search text' ]
+let g:which_key_map['u'] = [ ':UndotreeToggle'            , 'undo tree' ]
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
-let g:which_key_map['z'] = [ 'Goyo'                       , 'zen' ]
+let g:which_key_map['w'] = [ ':w'                         , 'save file']
+" let g:which_key_map['z'] = [ 'Goyo'                       , 'zen' ]
 
 " s is for search
 let g:which_key_map.s = {
@@ -56,12 +59,27 @@ let g:which_key_map.s = {
       \ 'P' : [':Tags'         , 'project tags'],
       \ 's' : [':Snippets'     , 'snippets'],
       \ 'S' : [':Colors'       , 'color schemes'],
-      \ 't' : [':Rg'           , 'text Rg'],
+      \ 't' : [':RG'           , 'text Rg'],
       \ 'T' : [':BTags'        , 'buffer tags'],
       \ 'w' : [':Windows'      , 'search windows'],
       \ 'y' : [':Filetypes'    , 'file types'],
       \ 'z' : [':FZF'          , 'FZF'],
       \ }
+
+" c is for coc-nvim
+let g:which_key_map.c = {
+    \ 'name' : '+coc',
+    \ 'd': ['<Plug>(coc-definition)', 'definition'],
+    \ 'y': ['<Plug>(coc-type-definition)', 'type definition'],
+    \ 'i': ['<Plug>(coc-implementation)', 'implementation'],
+    \ 'r': ['<Plug>(coc-references)', 'references'],
+    \ 'n': ['<Plug>(coc-rename)', 'rename'],
+    \ 'f': ['<Plug>(coc-format-selected)', 'format'],
+    \ 'o': [':CocList outline', 'outline'],
+    \ }
+
+nmap <leader>cq  <Plug>(coc-fix-current)
+let g:which_key_map.c.q = 'quick-fix'
 
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")

@@ -25,23 +25,6 @@ Plug 'jremmen/vim-ripgrep'
 
 " Intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = [
-\ 'coc-clangd',
-\ 'coc-java',
-\ 'coc-r-lsp',
-\ 'coc-jedi',
-\ 'coc-python',
-\ 'coc-json',
-\ 'coc-html',
-\ 'coc-css',
-\ 'coc-tsserver',
-\ 'coc-snippets',
-\ 'coc-vimlsp',
-\ 'coc-lua',
-\ 'coc-markdownlint',
-\ 'coc-explorer'
-\ ]
-
 " Snippets
 Plug 'honza/vim-snippets' 
 " Close HTML tags
