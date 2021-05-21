@@ -35,7 +35,6 @@ let g:which_key_map['T'] = [ ':RG'                        , 'search text' ]
 let g:which_key_map['u'] = [ ':UndotreeToggle'            , 'undo tree' ]
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
 let g:which_key_map['w'] = [ ':w'                         , 'save file']
-" let g:which_key_map['z'] = [ 'Goyo'                       , 'zen' ]
 
 " s is for search
 let g:which_key_map.s = {
@@ -75,11 +74,29 @@ let g:which_key_map.c = {
     \ 'r': ['<Plug>(coc-references)', 'references'],
     \ 'n': ['<Plug>(coc-rename)', 'rename'],
     \ 'f': ['<Plug>(coc-format-selected)', 'format'],
+    \ 'F': ['<Plug>(coc-format)', 'format all'],
     \ 'o': [':CocList outline', 'outline'],
     \ }
 
 nmap <leader>cq  <Plug>(coc-fix-current)
 let g:which_key_map.c.q = 'quick-fix'
+
+
+let g:which_key_map.t = {
+      \ 'name' : '+terminal' ,
+      \ ';' : [':FloatermNew --wintype=split --height=7'        , 'terminal'],
+      \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
+      \ 'g' : [':FloatermNew lazygit'                           , 'git'],
+      \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
+      \ 'n' : [':FloatermNew node'                              , 'node'],
+      \ 'N' : [':FloatermNew nnn'                               , 'nnn'],
+      \ 'p' : [':FloatermNew python'                            , 'python'],
+      \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
+      \ 't' : [':FloatermToggle'                                , 'toggle'],
+      \ 'y' : [':FloatermNew ytop'                              , 'ytop'],
+      \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
+      \ }
+
 
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")

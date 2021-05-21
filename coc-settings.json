@@ -1,11 +1,6 @@
 {
-
-  "snippets.ultisnips.directories":
-  [
-    "UltiSnips",
-    "~/.config/nvim/utils/snips"
-  ],
-  "r.lsp.diagnostics": false,
+  // snippets
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
 
   // explorer
   "explorer.width": 30,
@@ -14,6 +9,8 @@
   "explorer.keyMappings.global": {
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
-  }
+  },
 
+  // r
+  "r.lsp.diagnostics": false
 }

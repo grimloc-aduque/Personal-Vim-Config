@@ -10,14 +10,13 @@ let g:startify_lists = [
 
 let g:startify_bookmarks = [
             \ { 'i': '~/.config/nvim/init.vim' },
-            \ '~/Documents/prob_estadistica',
             \ ]
 
 let g:startify_session_autoload = 1
 
 let g:startify_session_delete_buffers = 1
 
-" let g:startify_change_to_vcs_root = 1
+let g:startify_change_to_vcs_root = 1
 
 let g:startify_session_persistence = 1
 
